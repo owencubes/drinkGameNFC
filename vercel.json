@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "public/index.html",
+      "src": "public/**/*",
       "use": "@vercel/static"
     },
     {
@@ -14,6 +14,10 @@
     {
       "src": "/api/leaderboard",
       "dest": "/api/leaderboard.js"
+    },
+    {
+      "src": "/.*",
+      "dest": "/public/index.html"
     }
   ]
 }
